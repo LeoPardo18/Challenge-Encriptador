@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background: rgb(214, 233, 235);
+}
+
+button {
+    padding: 20px 0;
+    width: 22vw;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+main.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+img.logo {
+    width: 50px;
+}
+
+.encrypter {
+    width: 70vw;
+    padding: 40px 80px;
+}
+
+.text-area, .botones {
+    margin-left: 11rem;
+}
+
+textarea {
+    width: 45vw;
+    height: 60vh;
+    border: none;
+    background: rgb(214, 233, 235);
+    resize: none;
+    font-weight: 400;
+    color: rgb(31, 29, 136);
+    font-size: xx-large;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+.botones div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+}
+
+.botones div:nth-child(2) {
+    margin-top: 1rem;
+    display: flex;
+}
+
+.botones button:first-child {
+    background-color: #0a3871;
+    color: white;
+    margin-right: 1.5rem;
+}
+
+.botones button:nth-child(2) {
+    color: #0a3871;
+    border: 1px solid #0a3871;
+}
+
+.encrypter-result {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 1rem;
+}
+
+.encrypter-result>div {
+    background-color: white;
+    height: 90%;
+    width: 90%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-shadow: 3px 3px 30px rgb(155, 155, 155);
+    overflow-y: scroll;
+    overflow-wrap: anywhere;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.result h1 {
+    padding: 0 75px;
+}
+
+.button-copy {
+    margin: 0 auto 1rem auto;
+    width: 80%;
+    display: none;
+}
+
+@media screen and (max-width: 1439px) {
+    .result>img {
+        display: none;
+    }
+
+    main.container {
+        height: auto;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .text-area, .botones {
+        margin-left: 0;
+    }
+
+    .encrypter {
+        height: 80vh;
+        width: 100vw;
+        margin-bottom: 8rem;
+        padding: 40px 30px;
+    }
+
+    textarea {
+        width: 95vw;
+        height: 50vh;
+    }
+
+    .botones button {
+        width: 50%;
+    }
+
+    .encrypter-result {
+        width: 100%;
+        padding-bottom: 15px;
+    }
+
+    .encrypter-result>div {
+        width: 90vw;
+        height: 10rem;
+        padding: 0.5rem 0;
+    }
+
+    .button-copy {
+        margin-top: 1rem;
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .encrypter {
+        height: auto;
+        margin-bottom: 0;
+    }
+
+    .botones div:nth-child(2) {
+        flex-direction: column;
+    }
+
+    .botones button {
+        width: 100%;
+    }
+
+    .botones button:first-child {
+        margin-bottom: 0.5rem;
+    }
+
+    .encrypter-result {
+        padding: 0 1rem;
+    }
+
+    #title-result {
+        font-size: 4vw;
+    }
+
+    .button-copy {
+        width: 50%;
+    }
+}
